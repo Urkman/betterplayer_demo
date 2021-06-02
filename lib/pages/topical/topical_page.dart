@@ -8,19 +8,20 @@ class TopicalPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(""),
         PlatformTextButton(
           onPressed: () {
             Coordinator().showClip(Clip.example(), context);
           },
-          child: Text("Show Clip with push"),
+          child: Center(child: Text("Show Clip with push")),
         ),
         PlatformTextButton(
           onPressed: () {
             Coordinator().showClipModal(Clip.example(), context);
           },
-          child: Text("Show Clip Modal"),
+          child: Center(child: Text("Show Clip Modal")),
         ),
       ],
     );
