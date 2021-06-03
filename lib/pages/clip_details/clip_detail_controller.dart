@@ -1,6 +1,8 @@
 import 'package:better_player/better_player.dart';
 import 'package:betterplayer_demo/application/globals.dart';
 import 'package:betterplayer_demo/models/clip.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
 
@@ -21,7 +23,10 @@ class ClipDetailController extends GetxController {
   void initPlayer() {
     BetterPlayerConfiguration betterPlayerConfiguration = BetterPlayerConfiguration(
       aspectRatio: 16 / 9,
+      fit: BoxFit.contain,
+      autoPlay: false,
       autoDispose: false,
+      deviceOrientationsAfterFullScreen: [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
       controlsConfiguration: BetterPlayerControlsConfiguration(
         enableSkips: false,
         enableOverflowMenu: false,

@@ -72,7 +72,7 @@ class ClipDetailPage extends StatelessWidget {
                 aspectRatio: 16 / 9,
                 child: BetterPlayer(
                   controller: controller.betterPlayerController!,
-                  key: Globals().betterPlayerKey,
+                  // key: Globals().betterPlayerKey,
                 ),
               ),
             Expanded(
