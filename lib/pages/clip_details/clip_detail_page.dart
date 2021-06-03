@@ -33,6 +33,7 @@ class ClipDetailPage extends StatelessWidget {
             color: UI.colors.text(context),
           ),
           onPressed: () {
+            controller.betterPlayerController?.pause();
             Navigator.of(context).pop();
           },
         ),

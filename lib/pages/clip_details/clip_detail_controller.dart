@@ -27,6 +27,12 @@ class ClipDetailController extends GetxController {
       autoPlay: false,
       autoDispose: false,
       deviceOrientationsAfterFullScreen: [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
+      playerVisibilityChangedBehavior: (visibilityFraction) {
+        print(visibilityFraction);
+        if (visibilityFraction < 0.5) {
+          betterPlayerController?.pause();
+        }
+      },
       controlsConfiguration: BetterPlayerControlsConfiguration(
         enableSkips: false,
         enableOverflowMenu: false,
